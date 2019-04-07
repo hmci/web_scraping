@@ -1,10 +1,10 @@
 # Ejemplo con mercado libre - precio del inmueble
 from urllib.request import urlopen
 from urllib.error import HTTPError
-from urllib.error import URLError 
+from urllib.error import URLError
 from bs4 import BeautifulSoup
 
-# Contador que representa el número de página 
+# Contador que representa el número de página
 numPagina = 1
 
 # Gestion del archivo csv
@@ -31,12 +31,12 @@ while numPagina <= 20:
 
                 # descripcion
                 contenedorDescripcion = tag.findAll("a",{"class":"item-url"})
-                desc = contenedorDescripcion[0].text.strip() 
+                desc = contenedorDescripcion[0].text.strip()
                 print(desc)
 
                 # precio del inmueble
                 contenedorPrecio = tag.findAll("p",{"class":"price"})
-                precio = contenedorPrecio[0].text.strip() 
+                precio = contenedorPrecio[0].text.strip()
                 print(precio)
 
                 # Tipo de inmueble
@@ -66,7 +66,7 @@ while numPagina <= 20:
                     area = ''
                 print(area)
 
-                # Numero  de habitaciones            
+                # Numero  de habitaciones
                 if len(contenedorHabitaciones) > 0:
                     tagNoDeseado = contenedorHabitaciones[0].find('span')
                     if tagNoDeseado != None:
@@ -75,11 +75,10 @@ while numPagina <= 20:
                     else:
                         habitaciones = contenedorHabitaciones[0].text.strip()
                 else:  habitaciones = ''
-                print(habitaciones)                                    
+                print(habitaciones)
 
                 f.write(desc+"|"+precio+"|"+tipo+"|"+ubicacion+"|"+fecha+"|"+area+"|"+habitaciones+"\n")
-            
+
     numPagina += 1
 
 f.close()
-            
