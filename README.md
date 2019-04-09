@@ -58,6 +58,7 @@ Por motivo de no saturar la página web de peticiones únicamente se capturo el 
 
 ###  Agradecimientos. Presentar al propietario del conjunto de datos. Es necesario incluir citas de investigación o análisis anteriores (si los hay).
 
+La práctica de Web Scraping se ha realizado sobre la página: [properati.com](https://www.properati.com.ec/). La cual es una página especializada en los anuncios de ventas y alquireres de bienes inmuebles. Funciona en distintos países de América Latina, aunque para el presente ejercicio se utilzó únicamente la información de anuncios de Ecuador y específicamente del Distrito Metropolitano de Quito.
 
 ### Inspiración. Explique por qué es interesante este conjunto de datos y qué preguntas se pretenden responder.
 
