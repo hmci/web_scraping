@@ -4,7 +4,7 @@
 - DIEGO CASTILLO CARRIÓN
 - CARLOS HERNÁNDEZ MARTÍNEZ
 
-### Contexto. Explicar en qué contexto se ha recolectado la información. Explique-por qué el sitio web elegido proporciona dicha información.
+### Explicar en qué contexto se ha recolectado la información. Explique-por qué el sitio web elegido proporciona dicha información.
 
 Hemos elegido el sitio web [properati.com](https://www.properati.com.ec/) porque se requiere realizar la siguiente investigación y resolver los objetivos planteados.
 
@@ -29,13 +29,13 @@ Actualmente la página web [properati.com](https://www.properati.com.ec/) es una
 El conjunto de datos contiene la información capturada desde el sitio web:  [properati.com](https://www.properati.com.ec/). En el conjunto de datos se tiene la principal información de los anuncios de ventas de bienes inmuebles recopilados, tales como: descripción del anuncio, área del inmueble, ubicación, número de habitaciones, precio de venta.
 La información recopilada corresponde únicamente a los anuncios publicados para el Distrito Metropolitano de Quito - Ecuador.
 
-### Representación gráfica. Presentar una imagen o esquema que identifique el dataset visualmente
+### Presentar una imagen o esquema que identifique el dataset visualmente
 
 ![alt text](https://github.com/difercast/web_scraping/blob/master/images/properati.png?raw=true "Anuncio Properati")
 
 ![alt text](https://github.com/difercast/web_scraping/blob/master/images/estadisticas.png?raw=true "Estadísticas de los anuncios")
 
-### Contenido. Explicar los campos que incluye el dataset, el periodo de tiempo de los datos y cómo se ha recogido.
+### Explicar los campos que incluye el dataset, el periodo de tiempo de los datos y cómo se ha recogido.
 
 Los campos contenidos en el dataset son:
 - __Descripción:__ Descripción del anuncio detallando las características del inmueble por parte del venderor.
@@ -49,7 +49,7 @@ Los campos contenidos en el dataset son:
 La recolección de la información se realizó el día 06.04.2018. Estos datos se recogieron mediante técnicas de Web scraping utilizando la librería BeautifulSoup sobre el entorno Jupiter.
 Por motivo de no saturar la página web de peticiones únicamente se capturo el resultado de las primeras 20 páginas de anuncios.
 
-###  Agradecimientos. Presentar al propietario del conjunto de datos. Es necesario incluir citas de investigación o análisis anteriores (si los hay).
+###  Presentar al propietario del conjunto de datos. Es necesario incluir citas de investigación o análisis anteriores (si los hay).
 
 __Properati__
 
@@ -60,7 +60,7 @@ Properati también ofrece una propuesta novedosa para las inmobiliarias o agente
 Actualmente Properati está online en Argentina, Colombia, Ecuador, Perú y Uruguay, y en todos los países realizó acuerdos con las inmobiliarias, agentes y constructoras más importantes para publicar sus propiedades. También están disponibles las versiones Android e iOS de Properati, con funcionalidades especialmente diseñadas para dispositivos móviles, como la búsqueda de propiedades cerca de la ubicación actual y una navegación simple y clara.
 
 
-### Inspiración. Explique por qué es interesante este conjunto de datos y qué preguntas se pretenden responder.
+### Explique por qué es interesante este conjunto de datos y qué preguntas se pretenden responder.
 
 Este conjunto de datos es interesante por su funcionalidad, a futuro nos va a permitir cumplir con varios objetivos propuestos, a la vez tienen variables para realizar cálculos  matemáticos, estadísticos.
 Anteriormente planteamos algunos objetivos que se pueden alcanzar con este trabajo, a continuación, está la explicación para poder realizarlos.
@@ -75,13 +75,13 @@ __Objetivo 3.__ Se filtrará los resultados para calcular el precio máximo y m�
 
 ### Licencia. Seleccione una de estas licencias para su dataset y explique el motivo de su selección.
 
-### Código. Adjuntar el código con el que se ha generado el dataset, preferiblemente en Python o, alternativamente, en R.
+### Adjuntar el código con el que se ha generado el dataset, preferiblemente en Python o, alternativamente, en R.
 
 El código utilizado para la realización de la práctica se encuentra en la sifuiente ruta del repositorio:
 
 `web_scraping/src/scraper.py`
 
-### Dataset. Presentar el dataset en formato CSV
+### Presentar el dataset en formato CSV
 
 El conjunto de datos resultante del ejercicio realizado se encuentra en la ruta indicada a continuación:
 
