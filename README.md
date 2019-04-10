@@ -77,7 +77,7 @@ __Objetivo 3.__ Se filtrará los resultados para calcular el precio máximo y m�
 
 ### Código. Adjuntar el código con el que se ha generado el dataset, preferiblemente en Python o, alternativamente, en R.
 
-El código utilizado para la realización de la práctica se encuentra en la sifuiente ruta dle repositorio:
+El código utilizado para la realización de la práctica se encuentra en la sifuiente ruta del repositorio:
 
 `web_scraping/src/scraper.py`
 
