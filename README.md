@@ -51,8 +51,40 @@ Por motivo de no saturar la página web de peticiones únicamente se capturo el 
 
 ###  Agradecimientos. Presentar al propietario del conjunto de datos. Es necesario incluir citas de investigación o análisis anteriores (si los hay).
 
-La práctica de Web Scraping se ha realizado sobre la página: [properati.com](https://www.properati.com.ec/). La cual es una página especializada en los anuncios de ventas y alquireres de bienes inmuebles. Funciona en distintos países de América Latina, aunque para el presente ejercicio se utilzó únicamente la información de anuncios de Ecuador y específicamente del Distrito Metropolitano de Quito.
+__Properati__
+
+Es una plataforma web y mobile de propiedades que nació para cambiar la forma en que se venden y arriendan inmuebles en Latinoamérica. Quienes busquen un nuevo hogar o quieran invertir en propiedades encontrarán en Properati, además de las ofertas disponibles, valiosa información para tomar las mejores decisiones: promedios de precios, características de los barrios, comparaciones, etc.
+
+Properati también ofrece una propuesta novedosa para las inmobiliarias o agentes que quieran vender una propiedad, ya que el modelo de negocios se basa en entregar contactos de calidad. Al pagar sólo por contacto recibido y no por banners o pop-ups, los incentivos entre el vendedor, el usuario y Properati quedan alineados, dando por resultado un sitio limpio y con una interfaz amigable.
+
+Actualmente Properati está online en Argentina, Colombia, Ecuador, Perú y Uruguay, y en todos los países realizó acuerdos con las inmobiliarias, agentes y constructoras más importantes para publicar sus propiedades. También están disponibles las versiones Android e iOS de Properati, con funcionalidades especialmente diseñadas para dispositivos móviles, como la búsqueda de propiedades cerca de la ubicación actual y una navegación simple y clara.
+
 
 ### Inspiración. Explique por qué es interesante este conjunto de datos y qué preguntas se pretenden responder.
 
+Este conjunto de datos es interesante por su funcionalidad, a futuro nos va a permitir cumplir con varios objetivos propuestos, a la vez tienen variables para realizar cálculos  matemáticos, estadísticos.
+Anteriormente planteamos algunos objetivos que se pueden alcanzar con este trabajo, a continuación, está la explicación para poder realizarlos.
+
+__Objetivo 1.__ Para calcular el precio en metros cuadrados vamos a filtrar por "ubicación" esta variable nos indica si esta en el norte, sur, centro o valles,  con esta información  vamos a determinar el valor del metro cuadrado en función al "precio" y el "área".
+
+__Objetivo 2.__ Vamos a  sectorizar los precios a través de la variable ubicación,
+Calculamos  la media del precio de cada  ubicación especifica.
+
+__Objetivo 3.__ Se filtrará los resultados para calcular el precio máximo y mínimo en función de la variable número de habitaciones.
+
+
 ### Licencia. Seleccione una de estas licencias para su dataset y explique el motivo de su selección.
+
+### Código. Adjuntar el código con el que se ha generado el dataset, preferiblemente en Python o, alternativamente, en R.
+
+El código utilizado para la realización de la práctica se encuentra en la sifuiente ruta dle repositorio:
+
+`web_scraping/src/scraper.py`
+
+### Dataset. Presentar el dataset en formato CSV
+
+El conjunto de datos resultante del ejercicio realizado se encuentra en la ruta indicada a continuación:
+
+`web_scraping/data/casas.csv`
+
+El separador del conjunto de datos es `|`
