@@ -24,10 +24,15 @@ Actualmente la página web [properati.com](https://www.properati.com.ec/) es una
 
  Anuncios de ventas de casas en el Distrito Metropolitano de Quito - Ecuador.
 
-### Descripción del dataset. Desarrollar una descripción breve del conjunto de datos que se ha extraído (es necesario que esta descripción tenga sentido con el título elegido).
+### Desarrollar una descripción breve del conjunto de datos que se ha extraído (es necesario que esta descripción tenga sentido con el título elegido).
 
-El conjunto de datos contiene la información capturada desde el sitio web:  [properati.com](https://www.properati.com.ec/). En el conjunto de datos se tiene la principal información de los anuncios de ventas de bienes inmuebles recopilados, tales como: descripción del anuncio, área del inmueble, ubicación, número de habitaciones, precio de venta.
-La información recopilada corresponde únicamente a los anuncios publicados para el Distrito Metropolitano de Quito - Ecuador.
+El conjunto de datos contiene la información capturada desde el sitio web:  [properati.com](https://www.properati.com.ec/). El Dataset contiene la información más relevante de los anuncios de ventas de bienes inmuebles para el Distrito Metropolitano de Quito en Ecuador. El principal objetivo del Dataset es responder preguntas acerca del precio de los inmuebles según el área, número de habitaciones, ubicación, etc. 
+
+Unos de los inconvenientes del dataset puede ser que presenta los auncios de solo una página web, para naálisis más relevantes se debería utilizar información obtenida desde diverentes sitios web de anuncios de ventas de bienes inmuebles. otro incoveniente es que el dataset no presenta importación más desagregada de los auncios como por ejemplo el número de baños, si cuenta o no con patio, si está ubicado dentro de un conjunto residencial y si el inmueble  cuenta con servicios básicos.
+
+Se debería realizar un tratamiento de la información antes de realizar el análisis. por ejemplo se deberia realizar la elimuinación de caracteres especiales del campo descripción, eliminación del signo de dólar ($) del campo precio, eliminación del símbolo de metros cuadrados del campo área.
+
+
 
 ### Presentar una imagen o esquema que identifique el dataset visualmente
 
