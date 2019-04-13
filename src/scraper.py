@@ -3,12 +3,10 @@ Practica 1: Web web_scraping
 Responsables:
  DIEGO CASTILLO CARRION
  CARLOS HERNANDEZ MARTINEZ
-
 Descripcion:
 Se realiza el ejercicio de web web_scraping sobre la web: properati.com
 en donde se trata de obtener la principal informacion de los anuncions de
 ventas de casas en Quito - Ecuador.
-
 Fecha de ejecucion:
 06.04.2019
 '''
@@ -18,6 +16,24 @@ from urllib.request import urlopen
 from urllib.error import HTTPError
 from urllib.error import URLError
 from bs4 import BeautifulSoup
+
+'''Se trabaja con el archivo robots.txt'''
+# Se crea un archivo de texto que contendra el contenido de robots.txt
+archivoRobots = "robots.txt"
+robotsTXT = open(archivoRobots,"w")
+
+try:
+    html = urlopen('https://www.properati.com.ec/robots.txt')
+except HTTPError as err:
+       print(err)
+except URLError:
+    print('El servidor está caido o el dominio es incorrecto')
+else:
+    robots = BeautifulSoup(html.read(),'html5lib')
+    robotsTXT.write(str(robots))    
+robotsTXT.close()
+
+'''Se trabaja con la página web seleccionada '''
 
 # Contador que representa el número de página
 numPagina = 1
@@ -38,66 +54,56 @@ while numPagina <= 20:
     except URLError:
         print('El servidor está caido o el dominio es incorrecto')
     else:
-        if res.title is None:
-            print("Tag no encontrado")
-        else:
-            res = BeautifulSoup(html.read(),'html5lib')
-            tags = res.findAll("article",{"class":"item"})
+        res = BeautifulSoup(html.read(),'html5lib')
+        tags = res.findAll("article",{"class":"item"})
 
-            for tag in tags:
+        for tag in tags:
 
-                # Se obtiene la descripcion del anuncio
-                contenedorDescripcion = tag.findAll("a",{"class":"item-url"})
-                desc = contenedorDescripcion[0].text.strip()
-                print(desc)
+            # Se obtiene la descripcion del anuncio
+            contenedorDescripcion = tag.findAll("a",{"class":"item-url"})
+            desc = contenedorDescripcion[0].text.strip()            
 
-                # Se obtiene el precio del inmueble
-                contenedorPrecio = tag.findAll("p",{"class":"price"})
-                precio = contenedorPrecio[0].text.strip()
-                print(precio)
+            # Se obtiene el precio del inmueble
+            contenedorPrecio = tag.findAll("p",{"class":"price"})
+            precio = contenedorPrecio[0].text.strip()            
 
-                # Se obtiene el tipo de inmueble
-                contenedorTipo = tag.findAll("p",{"class":"property-type"})
-                tipo = contenedorTipo[0].text.strip()
-                print(tipo)
+            # Se obtiene el tipo de inmueble
+            contenedorTipo = tag.findAll("p",{"class":"property-type"})
+            tipo = contenedorTipo[0].text.strip()            
 
-                # se obtiene la Ubicacion del inmueble
-                contenedorUbicacion = tag.findAll("p",{"class":"location"})
-                ubicacion = contenedorUbicacion[0].text.strip()
-                print(ubicacion)
+            # se obtiene la Ubicacion del inmueble
+            contenedorUbicacion = tag.findAll("p",{"class":"location"})
+            ubicacion = contenedorUbicacion[0].text.strip()            
 
-                # Fecha de publicacion
-                contenedorFecha = tag.findAll("p",{"class":"date-added"})
-                fecha = contenedorFecha[0].text.strip()
-                print(fecha)
+            # Fecha de publicacion
+            contenedorFecha = tag.findAll("p",{"class":"date-added"})
+            fecha = contenedorFecha[0].text.strip()            
 
-                # Area del inmueble, algunos valores vienen vacios
-                # por lo que se llenan con ''
-                contenedorHabitaciones = tag.findAll("p",{"class":"rooms"})
-                if len(contenedorHabitaciones) > 0:
-                    TagArea = contenedorHabitaciones[0].find('span')
-                    if TagArea != None:
-                        area = TagArea.text.strip()
-                    else:
-                        area = ''
+            # Area del inmueble, algunos valores vienen vacios
+            # por lo que se llenan con ''
+            contenedorHabitaciones = tag.findAll("p",{"class":"rooms"})
+            if len(contenedorHabitaciones) > 0:
+                TagArea = contenedorHabitaciones[0].find('span')
+                if TagArea != None:
+                    area = TagArea.text.strip()
                 else:
                     area = ''
-                print(area)
+            else:
+                area = ''            
 
-                # Numero  de habitaciones. Algunos valores vienen vacios
-                # y se llenan con ''
-                if len(contenedorHabitaciones) > 0:
-                    tagNoDeseado = contenedorHabitaciones[0].find('span')
-                    if tagNoDeseado != None:
-                        tagNoDeseado.extract()
-                        habitaciones = contenedorHabitaciones[0].text.strip()
-                    else:
-                        habitaciones = contenedorHabitaciones[0].text.strip()
-                else:  habitaciones = ''
-                print(habitaciones)
+            # Numero  de habitaciones. Algunos valores vienen vacios
+            # y se llenan con ''
+            if len(contenedorHabitaciones) > 0:
+                tagNoDeseado = contenedorHabitaciones[0].find('span')
+                if tagNoDeseado != None:
+                    tagNoDeseado.extract()
+                    habitaciones = contenedorHabitaciones[0].text.strip()
+                else:
+                    habitaciones = contenedorHabitaciones[0].text.strip()
+            else:  habitaciones = ''            
 
-                # Se escriben los datos en el rchivo csv
-                f.write(desc+"|"+precio+"|"+tipo+"|"+ubicacion+"|"+fecha+"|"+area+"|"+habitaciones+"\n")
+            # Se escriben los datos en el rchivo csv
+            f.write(desc+"|"+precio+"|"+tipo+"|"+ubicacion+"|"+fecha+"|"+area+"|"+habitaciones+"\n")
 
     numPagina += 1
 
