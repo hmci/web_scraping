@@ -4,7 +4,7 @@
 - DIEGO CASTILLO CARRIÓN
 - CARLOS HERNÁNDEZ MARTÍNEZ
 
-### Explicar en qué contexto se ha recolectado la información. Explique-por qué el sitio web elegido proporciona dicha información.
+### Explicar en qué contexto se ha recolectado la información. Explique por qué el sitio web elegido proporciona dicha información.
 
 Hemos elegido el sitio web [properati.com](https://www.properati.com.ec/) porque se requiere realizar la siguiente investigación y resolver los objetivos planteados.
 
@@ -28,10 +28,9 @@ Actualmente la página web [properati.com](https://www.properati.com.ec/) es una
 
 El conjunto de datos contiene la información capturada desde el sitio web:  [properati.com](https://www.properati.com.ec/). El Dataset contiene la información más relevante de los anuncios de ventas de bienes inmuebles para el Distrito Metropolitano de Quito en Ecuador. El principal objetivo del Dataset es responder preguntas acerca del precio de los inmuebles según el área, número de habitaciones, ubicación, etc. 
 
-Unos de los inconvenientes del dataset puede ser que presenta los auncios de solo una página web, para naálisis más relevantes se debería utilizar información obtenida desde diverentes sitios web de anuncios de ventas de bienes inmuebles. otro incoveniente es que el dataset no presenta importación más desagregada de los auncios como por ejemplo el número de baños, si cuenta o no con patio, si está ubicado dentro de un conjunto residencial y si el inmueble  cuenta con servicios básicos.
+Unos de los inconvenientes del dataset puede ser que presenta los anuncios de solo una página web, para análisis más relevantes se debería utilizar información obtenida desde diferentes sitios web de anuncios de ventas de bienes inmuebles. otro incoveniente es que el dataset no presenta importación más desagregada de los anuncios como por ejemplo el número de baños, si cuenta o no con patio, si está ubicado dentro de un conjunto residencial y si el inmueble  cuenta con servicios básicos.
 
-Se debería realizar un tratamiento de la información antes de realizar el análisis. por ejemplo se deberia realizar la elimuinación de caracteres especiales del campo descripción, eliminación del signo de dólar ($) del campo precio, eliminación del símbolo de metros cuadrados del campo área.
-
+Se debería realizar un tratamiento de la información antes de realizar el análisis. por ejemplo se deberia realizar la eliminación de caracteres especiales del campo descripción, eliminación del signo de dólar ($) del campo precio, eliminación del símbolo de metros cuadrados del campo área.
 
 
 ### Presentar una imagen o esquema que identifique el dataset visualmente
