@@ -42,13 +42,13 @@ Se debería realizar un tratamiento de la información antes de realizar el aná
 ### Explicar los campos que incluye el dataset, el periodo de tiempo de los datos y cómo se ha recogido.
 
 Los campos contenidos en el dataset son:
-- __Descripción:__ Descripción del anuncio detallando las características del inmueble por parte del venderor.
-- __Precio:__ Valor en Dólares del Inmueble.
-- __Tipo:__ Variables que describe si inmueble es casa o departamento.
-- __Ubicación:__ Dirección del Inmueble.
-- __Fecha de publicación:__ Fecha en la que se publicó el anuncio de venta del inmueble.
-- __Área:__ Área (en metros cuadrados) del inmueble.
-- __Núm. haitaciones:__ Número de habiataciones con las que cuenta el inmueble.
+- __Descripción:__ Descripción del anuncio detallando las características del inmueble por parte del venderor, tipo de dato string.
+- __Precio:__ Valor en Dólares del Inmueble, tipo de dato integer.
+- __Tipo:__ Variables que describe si inmueble es casa o departamento, tipo de dato string.
+- __Ubicación:__ Dirección del Inmueble, tipo de datos string.
+- __Fecha de publicación:__ Fecha en la que se publicó el anuncio de venta del inmueble, tipo de dato date
+- __Área:__ Área (en metros cuadrados) del inmueble, tipo de dato integer.
+- __Núm. haitaciones:__ Número de habiataciones con las que cuenta el inmueble, tipo de dato integer.
 
 La recolección de la información se realizó el día 06.04.2018. Estos datos se recogieron mediante técnicas de Web scraping utilizando la librería BeautifulSoup sobre el entorno Jupiter.
 Por motivo de no saturar la página web de peticiones únicamente se capturo el resultado de las primeras 20 páginas de anuncios.
@@ -78,6 +78,7 @@ __Objetivo 3.__ Se filtrará los resultados para calcular el precio máximo y m�
 
 
 ### Licencia. Seleccione una de estas licencias para su dataset y explique el motivo de su selección.
+La licencia seleccionada es Released Under CC0: Public Domain License, el motivo de la selección es una licencia de derecho de autor y código abierto, al ser un trabajo practico hemos pensado que es importante que esta información se pueda estudiar, compartir con la finalidad de que muchas usuarios  tengan acceso y se puedan beneficiar.
 
 ### Adjuntar el código con el que se ha generado el dataset, preferiblemente en Python o, alternativamente, en R.
 
